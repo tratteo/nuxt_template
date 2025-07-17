@@ -1,6 +1,6 @@
 # Nuxt badass template
 
-You can use this template as a starting point for any of your projects. Enhoy!
+You can use this template as a starting point for any of your projects. Enjoy!
 
 ## Tutorials and examples
 This repository is going to have different branches. Each branch is relative to a specific tutorial I posted on my channel.
