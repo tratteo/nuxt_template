@@ -5,20 +5,25 @@
 .nitro
 .cache
 dist
+*ignored*
 
 # Node dependencies
 node_modules
 
 # Logs
-logs
+/logs/
 *.log
 
 # Misc
 .DS_Store
 .fleet
 .idea
+*test*.*
 
 # Local env files
 .env
+.env*
 .env.*
 !.env.example
+
+
