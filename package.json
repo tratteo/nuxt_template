@@ -11,10 +11,15 @@
   },
   "dependencies": {
     "@nuxt/ui": "3.2.0",
+    "culori": "^4.0.2",
     "nuxt": "^4.0.0",
     "typescript": "^5.6.3",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/culori": "^4.0.0",
+    "@vueuse/core": "^13.5.0",
+    "@vueuse/nuxt": "^13.5.0"
+  }
 }

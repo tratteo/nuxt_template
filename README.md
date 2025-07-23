@@ -5,8 +5,11 @@ You can use this template as a starting point for any of your projects. Enjoy!
 ## Tutorials and examples
 This repository is going to have different branches. Each branch is relative to a specific tutorial I posted on my channel.
 
-### ✅ [Nuxt + Leaflet native integration](https://youtu.be/B24nLqwWzKI)  
+### 🗺️ [Nuxt + Leaflet native integration](https://youtu.be/B24nLqwWzKI)  
 -  Branch: [`leaflet-native-integration`](https://github.com/tratteo/nuxt_template/tree/leaflet-native-integration)
+
+### 📈 [Nuxt + ChartJS](https://youtu.be/sbnUjM30r2w)  
+-  Branch: [`chart-js`](https://github.com/tratteo/nuxt_template/tree/chart-js)
 
 ## ⚡Getting started
 Install dependencies
