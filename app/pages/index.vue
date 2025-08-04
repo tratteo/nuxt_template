@@ -1,22 +1,12 @@
 <template>
-    <div class="w-full flex flex-col gap-4 items-center mt-4">
-        <AsyncButton :promise="task">Execute Task</AsyncButton>
-        <AnimatedHeight class="bg-primary/25 rounded-md">
-            <div class="flex flex-col gap-2 items-center p-4">
-                <div>Evvai Lorem ipsum</div>
-                <div v-if="activated" class="w-full h-[16rem]"></div>
-            </div>
-        </AnimatedHeight>
+    <div class="w-full flex flex-col gap-8 items-center mt-4">
+        <p class="font-bold">Nuxt Template, examples and tutorials</p>
+        <u-button to="/leaflet" variant="soft" label="Nuxt + Leaflet" icon="simple-icons:leaflet"></u-button>
+        <u-button to="/chartjs" variant="soft" label="Nuxt + Chartjs" icon="file-icons:chartjs"></u-button>
+        <u-button to="/motion" variant="soft" label="Nuxt + Motion" icon="tabler:brand-framer-motion"></u-button>
     </div>
 </template>
 
-<script lang="ts" setup>
-const activated = ref(false);
-async function task() {
-    activated.value = true;
-    await sleep(1000);
-    activated.value = false;
-}
-</script>
+<script lang="ts" setup></script>
 
 <style></style>

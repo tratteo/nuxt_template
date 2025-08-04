@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@nuxt/ui": "3.3.0",
+    "chart.js": "^4.5.0",
     "culori": "^4.0.2",
-    "motion-v": "^1.6.1",
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3",
+    "motion-v": "^1.7.0",
     "nuxt": "^4.0.2",
     "typescript": "^5.9.2",
     "vue": "^3.5.18",
@@ -20,6 +23,8 @@
   },
   "devDependencies": {
     "@types/culori": "^4.0.0",
+    "@types/leaflet": "^1.9.20",
+    "@types/leaflet.markercluster": "^1.5.5",
     "@vueuse/core": "^13.6.0",
     "@vueuse/nuxt": "^13.6.0"
   }
