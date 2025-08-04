@@ -2,9 +2,6 @@
 
 You can use this template as a starting point for any of your projects. Enjoy!
 
-## Tutorials and examples
-This repository is going to have different branches. Each branch is relative to a specific tutorial I posted on my channel.
-
 ### Intergations and features
 Here are all the current integration and features. For each one of them I released a video tutorial on my [YouTube](https://www.youtube.com/@matteo-beltrame), go check it out.
 
