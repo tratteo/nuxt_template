@@ -1,11 +1,6 @@
 <template>
-    <motion.div
-        ref="content"
-        class="overflow-y-hidden"
-        :animate="{ height: contentHeight }"
-        :transition="{ duration: disableAnimation ? 0 : duration, type: 'spring', bounce: 0.25 }"
-    >
-        <div ref="inner" class="w-full flex items-center">
+    <motion.div ref="contentEl" class="overflow-y-hidden" :animate="{ height: contentHeight }" :transition="{ duration: duration, type: 'spring', bounce: 0.25 }">
+        <div ref="innerEl" class="w-full flex items-center">
             <slot></slot>
         </div>
     </motion.div>
@@ -22,26 +17,23 @@ defineProps({
         type: Number,
         default: 0.4,
     },
-    disableAnimation: {
-        type: Boolean,
-        default: false,
-    },
 });
 
-const content = ref<HTMLElement | null>(null);
-const inner = ref<HTMLElement | null>(null);
+const contentEl = useTemplateRef("contentEl");
+const innerEl = useTemplateRef("innerEl");
+
 let resizeObserver: ResizeObserver | null = null;
 const contentHeight = ref("0px");
 
-const updateHeight = () => {
-    if (!content.value || !inner.value) return;
-    contentHeight.value = `${inner.value.offsetHeight + 1}px`;
-};
+function updateHeight() {
+    if (!contentEl.value || !innerEl.value) return;
+    contentHeight.value = `${innerEl.value.offsetHeight + 1}px`;
+}
 
 onMounted(() => {
     resizeObserver = new ResizeObserver(updateHeight);
-    if (inner.value) {
-        resizeObserver.observe(inner.value);
+    if (innerEl.value) {
+        resizeObserver.observe(innerEl.value);
     }
     updateHeight();
 });
@@ -50,6 +42,6 @@ onUnmounted(() => {
 });
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 @reference "~/assets/css/main.css";
 </style>

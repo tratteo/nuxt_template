@@ -39,29 +39,14 @@
 </template>
 
 <script lang="ts" setup>
-import { LayoutGroup, motion, type VariantType } from "motion-v";
+import { LayoutGroup, motion, type $Transition, type VariantType } from "motion-v";
 
 const iconVariants: { [k: string]: VariantType } = {
-    hidden: {
-        opacity: 0,
-        scale: 0.5,
-    },
-    show: {
-        opacity: 1,
-        scale: 1,
-    },
+    hidden: { opacity: 0, scale: 0.5 },
+    show: { opacity: 1, scale: 1 },
 };
-const layoutTransition: any = {
-    type: "spring",
-    bounce: 0.25,
-    duration: 0.4,
-};
-const iconTransition: any = {
-    type: "spring",
-    bounce: 0.4,
-    duration: 0.3,
-    opacity: { delay: 0 },
-};
+const layoutTransition: $Transition = { type: "spring", bounce: 0.25, duration: 0.4 };
+const iconTransition: $Transition = { type: "spring", bounce: 0.4, duration: 0.3, opacity: { delay: 0 } };
 
 const awaitingPromise = ref(false);
 const isAwaiting = computed(() => props.awaiting || awaitingPromise.value);
