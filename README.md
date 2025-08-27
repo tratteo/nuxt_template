@@ -8,6 +8,7 @@ Here are all the current integration and features. For each one of them I releas
 - 🗺️ [Nuxt + Leaflet (native integration)](https://youtu.be/B24nLqwWzKI)  
 - 📈 [Nuxt + ChartJS](https://youtu.be/sbnUjM30r2w)  
 - 🎞️ [Nuxt + Motion](https://youtu.be/CIemLLeImjE)  
+- 📱 [NuxtUI Responsive Modals](https://youtu.be/OAScxDDialk)  
 
 ## ⚡Getting started
 Install dependencies
