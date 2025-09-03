@@ -23,3 +23,17 @@ export function pickRandom<T>(collection: T[] | null | undefined, amount: number
     } while (res.length < amount && indexes.length > 0);
     return res;
 }
+
+export function flattenDeep<T>(items: T[], iteratee: (arg: T) => T[] | undefined) {
+    const flatten: T[] = [];
+    for (const e of items) {
+        const childrens = [e];
+        while (childrens.length > 0) {
+            const current = childrens.shift();
+            if (!current) continue;
+            flatten.push(current);
+            childrens.push(...(iteratee(current) ?? []));
+        }
+    }
+    return flatten;
+}

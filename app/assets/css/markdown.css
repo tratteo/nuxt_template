@@ -1,0 +1,75 @@
+.markdown-content {
+    @apply text-start;
+
+    h1,
+    h2,
+    h2,
+    h3,
+    h4 {
+        @apply text-start! font-bold!;
+    }
+
+    h1 {
+        line-height: 1.5em !important;
+        @apply md:text-5xl text-4xl font-bold text-highlighted;
+    }
+    h2 {
+        line-height: 1.25em !important;
+        @apply text-2xl font-bold text-highlighted;
+    }
+    ul {
+        @apply my-2;
+    }
+    li {
+        text-indent: -1em;
+        @apply ml-8 my-1 text-start;
+    }
+
+    li::before {
+        content: "•";
+        @apply pr-2;
+    }
+
+    h2 {
+        @apply mt-10 mb-4;
+    }
+
+    h3 {
+        @apply mt-4 mb-2 text-highlighted font-semibold text-lg;
+    }
+
+    h4 {
+        @apply text-default;
+    }
+
+    .alert {
+        @apply my-2;
+    }
+
+    blockquote {
+        @apply relative py-2 px-4 my-2 bg-neutral-800 rounded-r-md text-start indent-0;
+    }
+
+    blockquote::before {
+        content: "";
+        @apply w-[4px] rounded-l-md bg-primary absolute left-0 top-0 h-full;
+    }
+    img {
+        @apply shrink-0! max-w-none!;
+    }
+
+    code {
+        word-break: normal;
+        overflow-wrap: anywhere;
+        @apply bg-neutral-800 px-[5px] py-[1px] rounded-md text-sm;
+    }
+
+    div:has(> table) {
+        scrollbar-width: thin;
+        @apply overflow-x-auto overflow-y-auto w-full contain-inline-size;
+    }
+
+    pre {
+        @apply px-4 bg-neutral-900 rounded-lg my-4 text-wrap;
+    }
+}

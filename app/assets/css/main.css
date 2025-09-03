@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+@import "~/assets/css/typography.css";
+@import "~/assets/css/markdown.css";
 
 @theme static {
     --font-sans: "Geist", sans-serif;
+}
+
+* {
+    scrollbar-width: thin !important;
+    scroll-behavior: smooth;
 }

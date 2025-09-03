@@ -9,6 +9,7 @@ Here are all the current integration and features. For each one of them I releas
 - 📈 [Nuxt + ChartJS](https://youtu.be/sbnUjM30r2w)  
 - 🎞️ [Nuxt + Motion](https://youtu.be/CIemLLeImjE)  
 - 📱 [NuxtUI Responsive Modals](https://youtu.be/OAScxDDialk)  
+- 📰 [Nuxt Responsive, functional and aesthetic blog](https://www.youtube.com/playlist?list=PLy6JsnZbXr8wztuwuDfNZmfKziSDVy9CM)  
 
 ## ⚡Getting started
 Install dependencies
