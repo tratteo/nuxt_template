@@ -21,7 +21,7 @@
     "leaflet.markercluster": "^1.5.3",
     "lodash": "^4.17.21",
     "motion-v": "^1.7.1",
-    "nuxt": "^4.1.0",
+    "nuxt": "^4.1.1",
     "remark-reading-time": "^2.0.2",
     "typescript": "^5.9.2",
     "vue": "^3.5.21",
