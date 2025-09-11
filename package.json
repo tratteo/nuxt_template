@@ -23,6 +23,7 @@
     "motion-v": "^1.7.1",
     "nuxt": "^4.1.1",
     "remark-reading-time": "^2.0.2",
+    "sortablejs": "^1.15.6",
     "typescript": "^5.9.2",
     "vue": "^3.5.21",
     "vue-router": "^4.5.1"

@@ -1,7 +1,14 @@
 <template>
-    <div class="w-full flex flex-col gap-4 items-center mt-4">
+    <div class="w-full flex flex-col gap-4 items-stretch mt-4">
+        <div class="flex justify-between gap-4 w-full items-center flex-wrap">
+            <u-form-field>
+                <template #label> In this tutorial we natively integrated <u-link to="https://leafletjs.com/" target="_blank">Leaflet</u-link> into Nuxt. </template>
+                <template #description>The map is rendered client side only and the Leaflet module is dynamically imported. Check out the YouTube video for more details.</template>
+            </u-form-field>
+            <u-button label="Check out the video" icon="logos:youtube-icon" color="neutral" to="https://youtu.be/B24nLqwWzKI" target="_blank"></u-button>
+        </div>
         <ClientOnly>
-            <MapView map-id="default-id" :height="'50svh'" width="100%" class="max-w-4xl" :markers="markers"></MapView>
+            <MapView map-id="default-id" :height="'50svh'" width="100%" :markers="markers"></MapView>
         </ClientOnly>
     </div>
 </template>

@@ -1,7 +1,25 @@
 <template>
     <div class="flex justify-center w-full">
-        <div class="flex flex-col gap-6 items-start w-full max-w-4xl">
-            <h1 class="typ-subtitle">List of Articles</h1>
+        <div class="flex flex-col gap-6 items-start w-full">
+            <div class="flex justify-between gap-4 w-full items-center flex-wrap">
+                <u-form-field>
+                    <template #label> A complete, responsive, aesthetic and SEO optimized Blog. </template>
+                    <template #description>
+                        <p>
+                            In this series of tutorials, we implemented a blog from scratch. We added cool features such as responsive Table of Content with microinteractions and
+                            made the blog SEO ready. <br />
+                        </p>
+                    </template>
+                </u-form-field>
+                <u-button
+                    label="Check out the playlist"
+                    icon="logos:youtube-icon"
+                    color="neutral"
+                    to="https://www.youtube.com/playlist?list=PLy6JsnZbXr8wztuwuDfNZmfKziSDVy9CM"
+                    target="_blank"
+                ></u-button>
+            </div>
+            <u-separator></u-separator>
             <u-button-group class="w-full">
                 <u-input type="text" placeholder="Search by title" class="w-full" v-model.trim="titleQuery"></u-input>
                 <u-button icon="material-symbols:close-rounded" @click="(): any => (titleQuery = '')" color="neutral" variant="subtle"></u-button>

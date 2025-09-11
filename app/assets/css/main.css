@@ -10,4 +10,7 @@
 * {
     scrollbar-width: thin !important;
     scroll-behavior: smooth;
+    --content-width: 60rem;
+    --headline-height: 72px;
+    scroll-margin-top: calc(var(--headline-height) + 1rem) !important;
 }

@@ -100,7 +100,4 @@ onMounted(() => {
 
 <style lang="css">
 @reference "~/assets/css/main.css";
-* {
-    @apply scroll-mt-[4rem]! md:scroll-mt-[1rem]!;
-}
 </style>

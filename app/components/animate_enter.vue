@@ -3,7 +3,7 @@
         initial="hidden"
         while-in-view="show"
         :variants="containerVariants"
-        :transition="{ duration: 0.6, type: 'spring', bounce: 0.25, staggerChildren: 0.5, delayChildren: 0.3 }"
+        :transition="{ duration: 0.6, type: 'spring', bounce: 0.25, staggerChildren: 0.2, delayChildren: 0.3 }"
         :in-view-options="{ once: true, amount: 0.75 }"
         class="w-full"
     >

@@ -1,12 +1,24 @@
 <template>
-    <div class="w-full flex flex-col gap-8 items-center mt-4">
-        <AsyncButton :promise="task">Execute task</AsyncButton>
-        <AnimatedHeight class="w-full max-w-xl bg-primary/15 rounded-lg">
+    <div class="w-full flex flex-col gap-4 items-center mt-4">
+        <div class="flex justify-between gap-4 w-full items-center flex-wrap">
+            <u-form-field>
+                <template #label> Make your users addicted with Microinteractions using <u-link to="https://motion.dev/docs/vue" target="_blank">Motion</u-link>. </template>
+                <template #description>
+                    In this example we have multiple components. <br />
+                    • The first is a button with microinteractions that responds to async tasks and can be used to give feedback to the user. <br />
+                    • The second component can wrap any element and dynamically adjusts its height based on the status of the children. <br />
+                    • The final one is a component that smoothly animates in children with some staggering, perfect for landing pages!
+                </template>
+            </u-form-field>
+            <u-button label="Check out the video" icon="logos:youtube-icon" color="neutral" to="https://youtu.be/CIemLLeImjE" target="_blank"></u-button>
+        </div>
+        <u-separator></u-separator>
+        <AsyncButton :promise="task">Expand container</AsyncButton>
+        <AnimatedHeight class="w-full bg-muted max-w-2xl border border-default rounded-lg">
             <div class="w-full" :class="{ 'h-[20rem]': activated, 'h-[4rem]': !activated }"></div>
         </AnimatedHeight>
-        <u-separator></u-separator>
         <AnimateEnter v-for="i in 10" class="max-w-2xl">
-            <u-card class="h-[40rem]" variant="subtle">
+            <u-card class="" variant="subtle">
                 <template #header>
                     <motion.p :variants="item">Card {{ i }}</motion.p>
                 </template>
@@ -15,7 +27,7 @@
                         <motion.p :variants="item"
                             >Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
                         </motion.p>
-                        <motion.div :variants="item"></motion.div>
+                        <motion.div :variants="item" class="bg-muted h-[10rem] w-full rounded-md"></motion.div>
                     </div>
                 </template>
             </u-card>

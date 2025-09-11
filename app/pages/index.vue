@@ -7,9 +7,10 @@
                 <u-button to="/motion" variant="soft" label="Nuxt + Motion" icon="tabler:brand-framer-motion"></u-button>
             </div>
         </u-form-field>
-        <u-form-field label="Components" description="Here you find all implemented components">
+        <u-form-field label="Components & Systems" description="Here you find all implemented components and different systems">
             <div class="flex items-stretch gap-2 w-full justify-start flex-wrap">
                 <u-button to="/modal" variant="soft" label="Nuxt + Modals" icon="material-symbols-light:select-window-2"></u-button>
+                <u-button to="/components" variant="soft" label="Implemented UI components" icon="mynaui:click-solid"></u-button>
             </div>
         </u-form-field>
         <u-form-field label="Blog" description="Your blog, already implemented!">

@@ -1,6 +1,13 @@
 <template>
-    <div class="w-full flex flex-col items-center mt-4">
-        <div class="flex flex-col max-w-5xl gap-16 w-full">
+    <div class="w-full flex flex-col items-center gap-4 mt-4">
+        <div class="flex justify-between gap-4 w-full items-center flex-wrap">
+            <u-form-field>
+                <template #label> Render beautiful charts in Nuxt with <u-link to="https://chartjs.org/" target="_blank">Chartjs</u-link>. </template>
+                <template #description> Check out the YouTube video for more details.</template>
+            </u-form-field>
+            <u-button label="Check out the video" icon="logos:youtube-icon" color="neutral" to="https://youtu.be/sbnUjM30r2w" target="_blank"></u-button>
+        </div>
+        <div class="flex flex-col gap-16 w-full">
             <ClientOnly>
                 <div class="relative w-full" :style="{ height: '30svh' }">
                     <Line class="max-w-full" :data="lineData" :options="lineChart.options.value" :plugins="[PluginsFactory.verticalIndicator]" />

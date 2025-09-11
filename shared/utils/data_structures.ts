@@ -10,6 +10,12 @@ export function count<T>(arr: T[], iteratee: (el: T) => boolean): number {
     return arr.filter(iteratee).length;
 }
 
+export function swap<T>(coll: T[], a: number, b: number) {
+    const tmp = coll[a];
+    coll[a] = coll[b]!;
+    coll[b] = tmp!;
+}
+
 export function pickRandom<T>(collection: T[] | null | undefined, amount: number): T[] {
     if (collection === null || collection === undefined) return [];
     if (collection.length <= amount) return collection;
