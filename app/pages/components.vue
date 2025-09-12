@@ -20,11 +20,23 @@
             <u-button label="Add" icon="material-symbols:add-rounded" variant="soft" class="w-fit ml-auto" @click="addItem"></u-button>
             <pre><code class="text-sm">{{ items }}</code></pre>
         </u-card>
+        <u-card variant="subtle" class="w-full">
+            <template #header>
+                <u-form-field label="Sticky element" description="Hover any of the following elements and they will stick to your mouse, very cool microinteraction"></u-form-field>
+            </template>
+            <div class="flex w-full justify-center">
+                <StickyElement v-if="mounted">
+                    <div class="bg-primary rounded-full aspect-square p-4 flex items-center justify-center text-inverted font-semibold">Hover me!</div>
+                </StickyElement>
+            </div>
+        </u-card>
     </div>
 </template>
 
 <script lang="ts" setup>
+const mounted = useMounted();
 const items = ref(listGenerate(5, (i) => `Element ${i}`));
+
 function addItem() {
     items.value.push(`Element ${items.value.length}`);
 }

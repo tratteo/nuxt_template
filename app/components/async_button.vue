@@ -1,33 +1,15 @@
 <template>
     <LayoutGroup>
         <motion.div layout :transition="layoutTransition">
-            <u-button @click="onClick" :disabled="isAwaiting || props.disabled" :type="type" :variant="variant" :color="color" class="flex items-center">
-                <template #leading>
-                    <motion.div
-                        key="loading-icon"
-                        layout
-                        v-if="isAwaiting"
-                        :variants="iconVariants"
-                        initial="hidden"
-                        animate="show"
-                        :transition="iconTransition"
-                        class="flex items-center"
-                    >
-                        <u-icon name="svg-spinners:180-ring-with-bg"></u-icon>
-                    </motion.div>
-                    <motion.div
-                        key="icon"
-                        layout
-                        v-else-if="leadingIcon"
-                        :variants="iconVariants"
-                        initial="hidden"
-                        animate="show"
-                        :transition="iconTransition"
-                        class="flex items-center"
-                    >
-                        <icon :name="leadingIcon"></icon>
-                    </motion.div>
-                </template>
+            <u-button
+                @click="onClick"
+                :disabled="isAwaiting || props.disabled"
+                :icon="isAwaiting ? 'svg-spinners:180-ring-with-bg' : leadingIcon"
+                :type="type"
+                :variant="variant"
+                :color="color"
+                class="flex items-center"
+            >
                 <template #default>
                     <motion.div v-if="$slots.default" key="content" layout :transition="layoutTransition">
                         <slot></slot>
