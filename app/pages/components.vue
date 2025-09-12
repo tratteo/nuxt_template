@@ -7,16 +7,43 @@
         <u-separator></u-separator>
         <u-card variant="subtle" class="w-full">
             <template #header>
-                <u-form-field label="Reordable list" description="Move the elements dragging them from the handle and check how the underlying list updates"></u-form-field>
+                <u-form-field label="Reordable elements" description="Move the elements dragging them from the handle and check how the underlying list updates"></u-form-field>
             </template>
-            <ReordableList :items="items">
-                <template #item="{ item, index }">
-                    <div class="bg-muted w-full rounded-md p-2 flex items-center">
-                        {{ item.payload }}
-                        <u-button color="error" variant="ghost" icon="material-symbols:delete-rounded" size="sm" class="ml-auto" @click="() => removeItem(index)"></u-button>
-                    </div>
-                </template>
-            </ReordableList>
+            <AnimatedHeight>
+                <div class="flex flex-col gap-4 w-full">
+                    <Reordable :items="items" class="">
+                        <template #item="{ item, index }">
+                            <div class="bg-muted w-full rounded-md p-2 flex items-center">
+                                {{ item.payload }}
+                                <u-button
+                                    color="error"
+                                    variant="ghost"
+                                    icon="material-symbols:delete-rounded"
+                                    size="sm"
+                                    class="ml-auto"
+                                    @click="() => removeItem(index)"
+                                ></u-button>
+                            </div>
+                        </template>
+                    </Reordable>
+                    <u-separator label="grid layout"></u-separator>
+                    <Reordable :items="items" class="grid! grid-cols-3 gap-2!">
+                        <template #item="{ item, index }">
+                            <div class="bg-muted w-full rounded-md h-[4rem] p-2 flex items-center">
+                                {{ item.payload }}
+                                <u-button
+                                    color="error"
+                                    variant="ghost"
+                                    icon="material-symbols:delete-rounded"
+                                    size="sm"
+                                    class="ml-auto"
+                                    @click="() => removeItem(index)"
+                                ></u-button>
+                            </div>
+                        </template>
+                    </Reordable>
+                </div>
+            </AnimatedHeight>
             <u-button label="Add" icon="material-symbols:add-rounded" variant="soft" class="w-fit ml-auto" @click="addItem"></u-button>
             <pre><code class="text-sm">{{ items }}</code></pre>
         </u-card>

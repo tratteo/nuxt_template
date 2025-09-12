@@ -32,10 +32,11 @@ useSortable(containerEl, mappedItems, {
 });
 
 watch(
-    () => props.items.length,
+    () => props.items,
     () => {
         mappedItems.value = props.items.map((l, i) => ({ id: i.toString(), payload: l }));
-    }
+    },
+    { deep: true }
 );
 
 watch(
