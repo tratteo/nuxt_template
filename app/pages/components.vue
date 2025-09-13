@@ -14,23 +14,7 @@
                     <Reordable :items="items" class="">
                         <template #item="{ item, index }">
                             <div class="bg-muted w-full rounded-md p-2 flex items-center">
-                                {{ item.payload }}
-                                <u-button
-                                    color="error"
-                                    variant="ghost"
-                                    icon="material-symbols:delete-rounded"
-                                    size="sm"
-                                    class="ml-auto"
-                                    @click="() => removeItem(index)"
-                                ></u-button>
-                            </div>
-                        </template>
-                    </Reordable>
-                    <u-separator label="grid layout"></u-separator>
-                    <Reordable :items="items" class="grid! grid-cols-3 gap-2!">
-                        <template #item="{ item, index }">
-                            <div class="bg-muted w-full rounded-md h-[4rem] p-2 flex items-center">
-                                {{ item.payload }}
+                                <u-input :model-value="item" @update:model-value="(v) => items.splice(index, 1, v)"></u-input>
                                 <u-button
                                     color="error"
                                     variant="ghost"
