@@ -6,6 +6,7 @@
 
 <script setup lang="ts">
 import { frame, motion, type SpringOptions, useMotionValue, useSpring } from "motion-v";
+import { onMounted, onUnmounted, ref } from "vue";
 
 const props = withDefaults(defineProps<{ amplitude?: number; spring?: SpringOptions }>(), {
     amplitude: 10,
@@ -24,15 +25,15 @@ function asymptoteFun(val: number) {
 }
 
 function handlePointerMove(ev: PointerEvent) {
-    const rect = elementRef.value?.$el;
-    if (!rect) return;
-
+    if (!dragging.value) return;
+    const el = elementRef.value?.$el;
+    if (!el) return;
+    const rect = (el as HTMLElement).getBoundingClientRect();
     frame.read(() => {
-        const targetX = ev.clientX - rect.offsetLeft - rect.offsetWidth / 2;
-        const targetY = ev.clientY - rect.offsetTop - rect.offsetHeight / 2;
+        const targetX = ev.clientX - (rect.left + rect.width / 2);
+        const targetY = ev.clientY - (rect.top + rect.height / 2);
         const restX = asymptoteFun(targetX);
         const restY = asymptoteFun(targetY);
-        if (!dragging.value) return;
         xPoint.set(restX);
         yPoint.set(restY);
     });

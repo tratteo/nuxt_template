@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-between gap-4 w-full items-stretch flex-wrap">
+    <div class="flex justify-between gap-4 w-full items-stretch flex-wrap mb-32">
         <u-form-field>
             <template #label> Here you find all the various implemented components. </template>
             <template #description>You can check the different sections to go directly to the corresponding video.</template>
@@ -41,11 +41,41 @@
                 </StickyElement>
             </div>
         </u-card>
+        <u-card variant="subtle" class="w-full">
+            <template #header>
+                <u-form-field label="Arrow microinteraction" description="Hover the button to animate the arrow"></u-form-field>
+            </template>
+            <div class="flex flex-col gap-2">
+                <div class="flex items-stretch gap-2">
+                    <u-select :items="['xs', 'sm', 'md', 'lg', 'xl']" v-model="animatedArrowProps.size"></u-select>
+                    <u-select :items="['outline', 'ghost', 'link', 'solid', 'subtle', 'soft']" v-model="animatedArrowProps.variant"></u-select>
+                </div>
+                <div class="flex w-full justify-center">
+                    <u-button class="group" :variant="cast<ButtonProps['variant']>(animatedArrowProps.variant)" :size="cast<ButtonProps['size']>(animatedArrowProps.size)">
+                        <AnimatedArrow :size="cast<ButtonProps['size']>(animatedArrowProps.size)"> Click me</AnimatedArrow>
+                    </u-button>
+                </div>
+            </div>
+        </u-card>
+        <u-card variant="subtle" class="w-full">
+            <template #header>
+                <u-form-field
+                    label="Morphing gradient"
+                    description="This gradient randomly animates its scale, border radius and adjusts its rotation based on the mouse interactions."
+                ></u-form-field>
+            </template>
+            <div class="flex flex-col gap-2">
+                <MorphingGradient class="opacity-100"></MorphingGradient>
+            </div>
+        </u-card>
     </div>
 </template>
 
 <script lang="ts" setup>
+import type { ButtonProps } from "@nuxt/ui";
+
 const mounted = useMounted();
+const animatedArrowProps = ref({ size: "md", variant: "solid" });
 const items = ref(listGenerate(5, (i) => `Element ${i}`));
 
 function addItem() {
