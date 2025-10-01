@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-row items-center group">
+    <div class="flex flex-row items-center group" :class="rootClass">
         <slot></slot>
         <div class="icon-wrapper">
             <div class="arrow-line"></div>
@@ -18,6 +18,12 @@ const size = computed(() => {
     if (["lg", "xl"].includes(props.size)) return "24px";
     return "20px";
 });
+const rootClass = computed(() => {
+    if (!props.size) return "gap-3";
+    if (["xs", "sm"].includes(props.size)) return "gap-2";
+    if (["lg", "xl"].includes(props.size)) return "gap-4";
+    return "gap-3";
+});
 </script>
 
 <style lang="css" scoped>
@@ -25,18 +31,15 @@ const size = computed(() => {
 * {
     --icon-size: v-bind(size);
     --length: calc(var(--icon-size) / 2);
-    --anim-duration: 200ms;
+    transition: all 200ms ease-out;
 }
 .icon-wrapper {
-    @apply relative h-[var(--icon-size)] w-[var(--icon-size)];
+    @apply relative h-[var(--icon-size)] w-[var(--length)];
 }
 .arrow-line {
-    width: var(--length);
-    transition: all var(--anim-duration) ease-out;
-    @apply absolute top-[50%] translate-x-[100%] translate-y-[-50%] origin-left h-[calc(var(--icon-size)/12)] scale-x-0 rounded-full bg-current group-hover:scale-100;
+    @apply absolute top-[50%] left-0 translate-y-[-50%] origin-left h-[calc(var(--icon-size)/12)] group-hover:w-[var(--length)] w-0 rounded-full bg-current;
 }
 .arrow-head {
-    transition: all var(--anim-duration) ease-out;
-    @apply absolute top-[50%] translate-y-[-50%] left-0 text-current  group-hover:left-[calc(var(--length)-1px)] h-[var(--icon-size)] w-[var(--icon-size)];
+    @apply absolute top-[50%] translate-x-[-55%] translate-y-[-50%] left-0 text-current group-hover:left-[var(--length)] h-[var(--icon-size)] w-[var(--icon-size)];
 }
 </style>

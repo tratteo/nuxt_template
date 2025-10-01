@@ -9,6 +9,9 @@ import { motion } from "motion-v";
 
 const blobEl = useTemplateRef("blobEl");
 const mounted = useMounted();
+const previousAngle = ref(0);
+const totalRotation = ref(0);
+const smoothAngle = ref(0);
 const props = withDefaults(defineProps<{ size?: string; blur?: number; scaleAmplitude?: number }>(), {
     size: "200px",
     scaleAmplitude: 0.2,
@@ -26,10 +29,6 @@ onMounted(() => {
 onUnmounted(() => {
     window.removeEventListener("mousemove", mouseMove);
 });
-
-const previousAngle = ref(0);
-const totalRotation = ref(0);
-const smoothAngle = ref(0);
 
 function getSmoothAngle(angle: number) {
     let angleDiff = angle - previousAngle.value;

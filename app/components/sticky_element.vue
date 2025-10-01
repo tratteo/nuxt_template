@@ -6,7 +6,6 @@
 
 <script setup lang="ts">
 import { frame, motion, type SpringOptions, useMotionValue, useSpring } from "motion-v";
-import { onMounted, onUnmounted, ref } from "vue";
 
 const props = withDefaults(defineProps<{ amplitude?: number; spring?: SpringOptions }>(), {
     amplitude: 10,
@@ -14,10 +13,8 @@ const props = withDefaults(defineProps<{ amplitude?: number; spring?: SpringOpti
 });
 
 const elementRef = useTemplateRef("elementRef");
-const xPoint = useMotionValue(0);
-const yPoint = useMotionValue(0);
-const x = useSpring(xPoint, props.spring);
-const y = useSpring(yPoint, props.spring);
+const x = useSpring(0, props.spring);
+const y = useSpring(0, props.spring);
 const dragging = ref(false);
 
 function asymptoteFun(val: number) {
@@ -34,8 +31,8 @@ function handlePointerMove(ev: PointerEvent) {
         const targetY = ev.clientY - (rect.top + rect.height / 2);
         const restX = asymptoteFun(targetX);
         const restY = asymptoteFun(targetY);
-        xPoint.set(restX);
-        yPoint.set(restY);
+        x.set(restX);
+        y.set(restY);
     });
 }
 
@@ -52,8 +49,8 @@ function handlePointerEnter() {
 }
 
 function handlePointerLeave() {
-    xPoint.set(0);
-    yPoint.set(0);
+    x.set(0);
+    y.set(0);
     dragging.value = false;
 }
 </script>
