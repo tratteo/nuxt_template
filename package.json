@@ -26,6 +26,7 @@
     "sortablejs": "^1.15.6",
     "typescript": "^5.9.2",
     "vue": "^3.5.22",
+    "vue-chartjs": "^5.3.2",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
