@@ -13,10 +13,10 @@
             <u-button label="Check out the video" icon="logos:youtube-icon" color="neutral" to="https://youtu.be/OAScxDDialk" target="_blank"></u-button>
         </div>
         <u-separator></u-separator>
-        <u-button-group>
+        <u-field-group>
             <u-button label="Open modal" @click="task" variant="subtle"></u-button>
             <u-select :items="items" placeholder="Pick an argument" class="min-w-[8rem]" v-model="arg"></u-select>
-        </u-button-group>
+        </u-field-group>
 
         <Modal ref="modalEl" title="A new cool modal" description="This is a very cool modal description that represents some information">
             <template #body="{ arg }">

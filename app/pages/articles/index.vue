@@ -20,13 +20,13 @@
                 ></u-button>
             </div>
             <u-separator></u-separator>
-            <u-button-group class="w-full">
+            <u-field-group class="w-full">
                 <u-input type="text" placeholder="Search by title" class="w-full" v-model.trim="titleQuery"></u-input>
                 <u-button icon="material-symbols:close-rounded" @click="(): any => (titleQuery = '')" color="neutral" variant="subtle"></u-button>
                 <u-button icon="material-symbols:database-search-rounded" @click="modalEl?.open" color="neutral" variant="subtle"></u-button>
-            </u-button-group>
+            </u-field-group>
             <section class="articles-grid">
-                <ArticleCard v-for="article in filteredArticles" :article="article" class="aspect-[2/1]"> </ArticleCard>
+                <ArticleCard v-for="article in filteredArticles" :article="article" class="aspect-2/1"> </ArticleCard>
             </section>
         </div>
         <Modal
