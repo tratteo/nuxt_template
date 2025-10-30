@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-8 items-stretch mt-4 max-w-2xl w-full mx-auto">
+    <div class="flex flex-col gap-8 items-stretch mt-4 w-full mx-auto">
         <u-form-field label="Integrations and packages" description="Here you find all the packages integrated into this template">
             <div class="flex items-stretch gap-2 w-full justify-start flex-wrap">
                 <u-button to="/leaflet" variant="soft" label="Nuxt + Leaflet" icon="simple-icons:leaflet"></u-button>
@@ -13,9 +13,19 @@
                 <u-button to="/components" variant="soft" label="Implemented UI components" icon="mynaui:click-solid"></u-button>
             </div>
         </u-form-field>
-        <u-form-field label="Blog" description="Your blog, already implemented!">
+
+        <u-form-field label="Nuxt UI Pro Blog">
+            <template #hint>
+                <u-button variant="link" size="sm" class="group" to="https://nuxt.com/blog/nuxt-ui-v4" target="_blank">
+                    Read the blog post
+                    <AnimatedArrow></AnimatedArrow>
+                </u-button>
+            </template>
+            <template #description>
+                <p>Nuxt UI Pro has become 100% free! This blog is implemented using the new Nuxt UI components.</p>
+            </template>
             <div class="flex items-stretch gap-2 w-full justify-start flex-wrap">
-                <u-button to="/articles" variant="soft" label="Go to blog" icon="material-symbols-light:article-rounded"></u-button>
+                <u-button to="/articles" variant="soft" label="Go to NuxtUI blog" icon="material-symbols-light:article-rounded"></u-button>
             </div>
         </u-form-field>
     </div>

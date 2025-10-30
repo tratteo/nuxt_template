@@ -1,6 +1,6 @@
 <template>
     <div :style="{ height: height, width: width }" class="relative overflow-clip rounded-lg">
-        <div v-if="controls" class="absolute bottom-0 right-[50%] translate-x-[50%] p-4 flex items-center gap-1 z-[1000]">
+        <div v-if="controls" class="absolute bottom-0 right-[50%] translate-x-[50%] p-4 flex items-center gap-1 z-1000">
             <u-button @click="zoomOut" title="Zoom out" variant="soft" size="sm" color="neutral" icon="material-symbols:remove-rounded"> </u-button>
             <u-button @click="zoomIn" title="Zoom in" variant="soft" size="sm" color="neutral" icon="material-symbols:add-rounded"> </u-button>
             <u-button @click="() => fitView()" title="Center view" variant="soft" size="sm" color="neutral" icon="material-symbols:center-focus-weak-outline"> </u-button>

@@ -16,11 +16,11 @@
             </div>
         </div>
         <div class="w-[40%] flex flex-col items-center justify-center h-full">
-            <div class="flex h-[80%] w-full border-2 border-white/20 rounded-l-[2rem] overflow-hidden pl-12 py-12 relative">
+            <div class="flex h-[80%] w-full border-2 border-white/20 rounded-l-2rem overflow-hidden pl-12 py-12 relative">
                 <div class="absolute right-0 top-0 bottom-0 left-0">
                     <!-- <img src="/assets/articles/hero_1.jpeg" class="w-full h-full object-cover" /> -->
                 </div>
-                <img :src="thumbnail" class="w-full h-full object-cover rounded-l-[2rem]" />
+                <img :src="thumbnail" class="w-full h-full object-cover rounded-l-2rem" />
             </div>
         </div>
     </div>
