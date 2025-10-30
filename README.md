@@ -4,8 +4,9 @@ You can use this template as a starting point for any of your Nuxt projects. Enj
 
 ### Changelog
 - Nuxt UI `^4.0.0` has become free! ([blog post here](https://nuxt.com/blog/nuxt-ui-v4)). I have changed the Blog section in order to use all the new Nuxt UI components.
-    > [!NOTE]
-    > If you want to still check how to implement all the components natively, refer to commit [a96557f](https://github.com/tratteo/nuxt_template/tree/a96557f941936dc572fe216ec182421811752975)
+
+> [!NOTE]
+> If you want to still check how to implement all the components natively, refer to commit [a96557f](https://github.com/tratteo/nuxt_template/tree/a96557f941936dc572fe216ec182421811752975)
 
 ### Intergations and features
 Here are all the current integration and features. For each one of them I released a video tutorial on my [YouTube](https://www.youtube.com/@matteo-beltrame), go check it out.
