@@ -11,7 +11,8 @@ thumbnail: /assets/articles/why-you-should-drink-water.jpeg
 
 Listen up, fellow humans! We need to talk about something that's literally flowing through your veins right now (hopefully). Water. That clear, tasteless liquid that makes up about 60% of your body and 100% of your survival needs. Yet somehow, most of us treat hydration like it's optional – kind of like reading the terms and conditions before clicking "I agree."
 
-::alert{type="info" title="Fun Fact Alert!" description="Your brain is about 75% water. So when you're feeling foggy, you might literally have a drought upstairs!"}
+::note{}
+Your brain is about 75% water. So when you're feeling foggy, you might literally have a drought upstairs!
 ::
 
 ## Why Your Body Is Basically a Needy Plant
@@ -23,10 +24,7 @@ Your body is essentially a very complicated houseplant that can walk around and 
 - **Your brain fog gets thicker** than the plot of a Christopher Nolan movie
 - **Your kidneys start side-eyeing you** like disappointed parents
 
-::u-card{variant="subtle" class="mt-4"}
-#header 
-The Science Bit (Don't Worry, It's Simple)
-#default
+::card{title="The Science Bit (Don't Worry, It's Simple)"}
 Water helps transport nutrients to your cells, removes waste products, regulates body temperature, cushions joints, and keeps your organs from getting too cozy with each other. Think of it as your body's internal Uber service – everything needs a ride somewhere, and water is the driver.
 ::
 
@@ -43,7 +41,8 @@ That "8 glasses a day" rule? It's about as accurate as weather forecasts and hor
 
 Your body has more warning signs than a construction site:
 
-::alert{type="warning" title="Red Flag Alert!" description="Dark yellow urine is like your body's check engine light. Pale yellow = you're winning at life. Dark amber = time to chug some water, stat!"}
+::warning{}
+Dark yellow urine is like your body's check engine light. Pale yellow = you're winning at life. Dark amber = time to chug some water, stat!
 ::
 
 Other sneaky dehydration symptoms:
@@ -75,12 +74,7 @@ Let's be honest – plain water can be about as exciting as watching paint dry i
 
 Our brains are fantastic at remembering useless trivia from 1997 but terrible at basic self-care. Here are some foolproof methods:
 
-::u-card{variant="subtle" class="mt-4"}
-
-#header
-The Habit Stacking Method
-
-#default
+::card{title="The Habit Stacking Method"}
 Link drinking water to existing habits. Every time you check your phone (so, every 3 minutes), take a sip. Go to the bathroom? Drink water. Open your laptop? Water time. Your bladder might hate you initially, but your body will thank you.
 ::
 
@@ -96,7 +90,8 @@ Link drinking water to existing habits. Every time you check your phone (so, eve
 
 ## Common Hydration Myths: Busted!
 
-::alert{type="error" title="Myth Alert!" description="Coffee and tea dehydrate you – WRONG! While caffeine has mild diuretic effects, you're still getting net hydration. Your morning coffee counts, coffee addicts rejoice! ☕"}
+::caution{}
+Coffee and tea dehydrate you – WRONG! While caffeine has mild diuretic effects, you're still getting net hydration. Your morning coffee counts, coffee addicts rejoice! ☕
 ::
 
 Other myths that need to die:
@@ -116,7 +111,8 @@ So grab that water bottle, fill it up, and start sipping. Your future self will 
 Now if you'll excuse me, all this talk about water has made me realize I haven't had any in... wait, what day is it? 
 
 
-::alert{type="success" title="Challenge Accepted?" description="Try drinking your target amount for just one week and see how you feel. We bet you'll notice the difference! 💪"}
+::tip{}
+Try drinking your target amount for just one week and see how you feel. We bet you'll notice the difference! 💪
 ::
 
 ::author-about{:src="author_avatar" :name="author"}

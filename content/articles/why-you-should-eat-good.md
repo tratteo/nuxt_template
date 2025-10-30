@@ -11,7 +11,8 @@ thumbnail: /assets/articles/why-you-should-eat-good.jpeg
 
 Alright, beautiful humans, let's have a heart-to-heart about the fuel you're putting in your magnificent meat suit. If your body were a luxury car, would you fill it with premium gasoline or would you dump a mixture of Red Bull and regret into the tank? Because right now, many of us are treating our bodies like they're indestructible garbage disposals with legs.
 
-::alert{type="warning" title="Reality Check" description="That 3 PM energy crash isn't a mysterious phenomenon – it's your body staging a revolt against the sugar-laden breakfast pastry and the lunch that came from a drive-through window! 🚗🍟"}
+::warning{}
+That 3 PM energy crash isn't a mysterious phenomenon – it's your body staging a revolt against the sugar-laden breakfast pastry and the lunch that came from a drive-through window! 🚗🍟
 ::
 
 ## The Whole Foods Revolution: Why Your Grocery Cart Matters
@@ -20,11 +21,7 @@ Whole foods aren't just a fancy store where you spend $47 on organic kale (thoug
 
 Here's the brilliant thing about whole foods: they come pre-programmed with exactly what your body needs. It's like nature spent millions of years perfecting the recipe, while food scientists spent decades trying to make it more addictive and shelf-stable.
 
-::u-card{variant="subtle" class="mt-4"}
-#header 
-The Whole Foods Cheat Sheet
-
-#default
+::card{title="The Whole Foods Cheat Sheet"}
 If it has more than 5 ingredients, if you can't pronounce half of them, or if it promises to 'boost your energy with natural flavors' – it's probably not whole food. Real food doesn't need a marketing department.
 ::
 
@@ -74,7 +71,8 @@ Don't overhaul your entire diet overnight unless you enjoy setting yourself up f
 ### The 80/20 Rule (Your Sanity's Best Friend)
 Aim for whole foods 80% of the time, and don't stress about the other 20%. Life is meant to be lived, and sometimes that includes birthday cake or pizza with friends. The goal is progress, not perfection.
 
-::alert{type="info" title="Permission Slip" description="You are hereby granted permission to eat foods you enjoy without guilt. The stress from guilt might be worse for you than the occasional cookie. Mind = blown! 🍪"}
+::note{}
+You are hereby granted permission to eat foods you enjoy without guilt. The stress from guilt might be worse for you than the occasional cookie. Mind = blown! 🍪
 ::
 
 ### Meal Prep Like a Boss
@@ -86,11 +84,7 @@ Aim for whole foods 80% of the time, and don't stress about the other 20%. Life 
 ## Shopping Strategies for Real Food Success
 
 
-::u-card{variant="subtle" class="mt-4"}
-#header 
-The Perimeter Rule
-
-#default
+::card{title="The Perimeter Rule"}
 Shop the perimeter of the grocery store first – that's where the whole foods live. The middle aisles are where processed foods go to party. It's like food geography, but more delicious.
 ::
 
@@ -120,7 +114,8 @@ The biggest myth about healthy eating is that it has to be boring. Have you ever
 - **Umami** – mushrooms, aged cheese, fermented foods add depth
 - **Heat** – chili peppers boost metabolism AND flavor
 
-::alert{type="success" title="Chef's Secret" description="Salt your vegetables while cooking them, not after. They'll taste better and you'll use less salt overall. Your taste buds and your blood pressure will thank you! 👨‍🍳"}
+::tip{}
+Salt your vegetables while cooking them, not after. They'll taste better and you'll use less salt overall. Your taste buds and your blood pressure will thank you! 👨‍🍳
 ::
 
 ## The Mindset Shift That Changes Everything

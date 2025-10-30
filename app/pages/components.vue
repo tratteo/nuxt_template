@@ -59,6 +59,21 @@
         </u-card>
         <u-card variant="subtle" class="w-full">
             <template #header>
+                <u-form-field label="Copyable text menu" description="A text field that can be copied and has the possibility to add different actions"></u-form-field>
+            </template>
+            <div class="flex flex-col items-center gap-2">
+                <CopyableText
+                    content="Copy me!"
+                    class="w-fit"
+                    :items="[
+                        { label: 'Check repository', icon: 'mdi:github' },
+                        { label: 'Go on YouTube', icon: 'mdi:youtube' },
+                    ]"
+                ></CopyableText>
+            </div>
+        </u-card>
+        <u-card variant="subtle" class="w-full">
+            <template #header>
                 <u-form-field
                     label="Morphing gradient"
                     description="This gradient randomly animates its scale, border radius and adjusts its rotation based on the mouse interactions."

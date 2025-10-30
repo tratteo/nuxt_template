@@ -13,7 +13,8 @@ Oh, hello there, fellow human who probably has a gym membership they use about a
 
 Here's the thing: sporadic bursts of motivation are like that friend who shows up unannounced, eats all your snacks, gets you super pumped about reorganizing your life, and then disappears for three months. Fun in the moment, but not exactly reliable for long-term success.
 
-::alert{type="info" title="Plot Twist" description="You don't need to be motivated to be consistent. In fact, consistency is what creates motivation, not the other way around! Mind = blown! 🤯"}
+::note{}
+You don't need to be motivated to be consistent. In fact, consistency is what creates motivation, not the other way around! Mind = blown! 🤯
 ::
 
 ## Why Your All-or-Nothing Approach Is All Wrong
@@ -24,11 +25,7 @@ By Wednesday, you've crashed harder than a computer running Windows Vista.
 
 The problem isn't your willpower or dedication – it's your approach. You're trying to go from couch potato to Olympic athlete overnight, and your body (and brain) are having none of it.
 
-::u-card{variant="subtle" class="mt-4"}
-#header 
-The Consistency Paradox
-
-#default
+::card{title="The Consistency Paradox"}
 The people who seem most disciplined aren't superhuman – they've just made their habits so small and automatic that they barely require willpower. They're like efficiency ninjas, but with better sleep schedules.
 ::
 
@@ -70,7 +67,8 @@ The British cycling team had a revolutionary approach: instead of looking for ma
 
 Your life works the same way. You don't need to overhaul everything – you need to improve consistently.
 
-::alert{type="success" title="Math That Will Blow Your Mind" description="If you improve by just 1% every day for a year, you'll be 37 times better by the end. If you get 1% worse each day, you'll decline to nearly zero. The power of consistency is literally exponential! 📈"}
+::tip{}
+If you improve by just 1% every day for a year, you'll be 37 times better by the end. If you get 1% worse each day, you'll decline to nearly zero. The power of consistency is literally exponential! 📈
 ::
 
 ### Applying the 2% Rule
@@ -95,11 +93,7 @@ Your environment is either working for you or against you. There's no neutral. I
 - **Remove temptations:** Don't buy food you don't want to eat
 - **Change your route:** If you always stop for donuts on Main Street, take Oak Street instead
 
-::u-card{variant="subtle" class="mt-4"}
-#header
-The 20-Second Rule
-
-#default
+::card{title="The 20-Second Rule"}
 Make good habits 20 seconds easier to start and bad habits 20 seconds harder. Want to exercise? Sleep in your workout clothes. Want to eat less junk food? Put it in the basement freezer instead of the kitchen counter. Small friction changes, big behavioral results.
 ::
 
@@ -122,7 +116,8 @@ The goal gives you a target, but the system gives you a process. And here's the 
 
 Motivation is like a fair-weather friend – great when things are going well, but nowhere to be found when you actually need it. Successful people aren't more motivated; they've just built systems that don't depend on motivation.
 
-::alert{type="warning" title="Reality Check" description="You will not feel like doing it most days. That's not a bug in your system – that's a feature of being human. The goal is to do it anyway, especially when you don't feel like it. 🚀"}
+::warning{}
+You will not feel like doing it most days. That's not a bug in your system – that's a feature of being human. The goal is to do it anyway, especially when you don't feel like it. 🚀
 ::
 
 ### Strategies for Motivationless Days
@@ -170,7 +165,8 @@ The people you admire who seem to have their lives together aren't genetically s
 
 Start today. Start small. Start where you are with what you have. Your future self – the one who built incredible results through the simple act of showing up daily – is already cheering you on.
 
-::alert{type="success" title="Your Mission" description="Pick ONE habit. Make it stupidly small. Do it for 7 days. Then come back and tell us how it felt to keep a promise to yourself for a whole week. We're betting it feels pretty amazing! 💪"}
+::tip{}
+Pick ONE habit. Make it stupidly small. Do it for 7 days. Then come back and tell us how it felt to keep a promise to yourself for a whole week. We're betting it feels pretty amazing! 💪
 ::
 
 ::author-about{:src="author_avatar" :name="author"}
