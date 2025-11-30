@@ -10,29 +10,29 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^3.8.0",
-    "@nuxt/ui": "4.1.0",
+    "@nuxt/content": "^3.8.2",
+    "@nuxt/ui": "4.2.1",
     "@nuxtjs/seo": "^3.2.2",
     "chart.js": "^4.5.1",
     "culori": "^4.0.2",
-    "dayjs": "^1.11.18",
+    "dayjs": "^1.11.19",
     "fuse.js": "^7.1.0",
     "leaflet": "^1.9.4",
     "leaflet.markercluster": "^1.5.3",
     "lodash": "^4.17.21",
     "motion-v": "^1.7.4",
-    "nuxt": "^4.2.0",
+    "nuxt": "^4.2.1",
     "remark-reading-time": "^2.0.2",
     "sortablejs": "^1.15.6",
-    "vue": "^3.5.22",
-    "vue-chartjs": "^5.3.2",
+    "vue": "^3.5.25",
+    "vue-chartjs": "^5.3.3",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@types/culori": "^4.0.1",
     "@types/leaflet": "^1.9.21",
     "@types/leaflet.markercluster": "^1.5.6",
-    "@vueuse/core": "^14.0.0",
-    "@vueuse/nuxt": "^14.0.0"
+    "@vueuse/core": "^14.1.0",
+    "@vueuse/nuxt": "^14.1.0"
   }
 }
