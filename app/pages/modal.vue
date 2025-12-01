@@ -15,12 +15,12 @@
         <u-separator></u-separator>
         <u-field-group>
             <u-button label="Open modal" @click="task" variant="subtle"></u-button>
-            <u-select :items="items" placeholder="Pick an argument" class="min-w-[8rem]" v-model="arg"></u-select>
+            <u-select :items="items" placeholder="Pick an argument" class="min-w-32" v-model="arg"></u-select>
         </u-field-group>
 
-        <Modal ref="modalEl" title="A new cool modal" description="This is a very cool modal description that represents some information">
+        <modal ref="modalEl" title="A new cool modal" description="This is a very cool modal description that represents some information">
             <template #body="{ arg }">
-                <div class="min-h-[10rem]">Argument: {{ arg ?? "undefined" }}</div>
+                <div class="min-h-40">Argument: {{ arg ?? "undefined" }}</div>
                 <Modal ref="nestedModal" title="This is a nested modal" description="This nested modal has the argument equal to double the initial argument">
                     <template #body="{ arg }">Argument: {{ arg }}</template>
                 </Modal>
@@ -28,7 +28,7 @@
             <template #footer="{ arg }">
                 <u-button label="Open nested" color="neutral" @click="() => nestedModalEl?.open(arg * 2)"></u-button>
             </template>
-        </Modal>
+        </modal>
     </div>
 </template>
 

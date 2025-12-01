@@ -73,7 +73,7 @@ function fitView(animate: boolean = true) {
     }
 }
 function injectMarkers() {
-    const clusterGroup = leaflet.markerClusterGroup();
+    const clusterGroup = (leaflet as any).markerClusterGroup();
     const layers: L.Layer[] = [];
     console.log(props.markers);
     (props.markers ?? []).forEach((m) => {

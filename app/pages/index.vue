@@ -3,7 +3,7 @@
         <u-form-field label="Integrations and packages" description="Here you find all the packages integrated into this template">
             <div class="flex items-stretch gap-2 w-full justify-start flex-wrap">
                 <u-button to="/leaflet" variant="soft" label="Nuxt + Leaflet" icon="simple-icons:leaflet"></u-button>
-                <u-button to="/chartjs" variant="soft" label="Nuxt + Chartjs" icon="file-icons:chartjs"></u-button>
+                <u-button to="/charts" variant="soft" label="Nuxt + Echarts" icon="simple-icons:apacheecharts"></u-button>
                 <u-button to="/motion" variant="soft" label="Nuxt + Motion" icon="tabler:brand-framer-motion"></u-button>
             </div>
         </u-form-field>
@@ -18,7 +18,7 @@
             <template #hint>
                 <u-button variant="link" size="sm" class="group" to="https://nuxt.com/blog/nuxt-ui-v4" target="_blank">
                     Read the blog post
-                    <AnimatedArrow></AnimatedArrow>
+                    <animated-arrow></animated-arrow>
                 </u-button>
             </template>
             <template #description>

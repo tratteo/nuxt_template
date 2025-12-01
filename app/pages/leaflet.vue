@@ -7,9 +7,9 @@
             </u-form-field>
             <u-button label="Check out the video" icon="logos:youtube-icon" color="neutral" to="https://youtu.be/B24nLqwWzKI" target="_blank"></u-button>
         </div>
-        <ClientOnly>
-            <MapView map-id="default-id" :height="'50svh'" width="100%" :markers="markers"></MapView>
-        </ClientOnly>
+        <client-only>
+            <map-view map-id="default-id" :height="'50svh'" width="100%" :markers="markers"></map-view>
+        </client-only>
     </div>
 </template>
 

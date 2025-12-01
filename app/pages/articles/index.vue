@@ -31,9 +31,9 @@
                     </div>
                 </u-content-search-button>
             </u-field-group>
-            <ClientOnly>
+            <client-only>
                 <u-content-search v-model:search-term="query" shortcut="meta_k" :files="files" :navigation="navigation" :fuse="{ resultLimit: 42 }"></u-content-search>
-            </ClientOnly>
+            </client-only>
             <u-empty
                 v-if="(articles?.length ?? 0) <= 0"
                 title="No interesting material yet"

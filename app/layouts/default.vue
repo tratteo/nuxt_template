@@ -5,7 +5,7 @@
                 <u-user name="Nuxt template" to="/" :avatar="{ src: 'https://tratteo.it/favicon.svg' }"></u-user>
             </template>
             <template #right>
-                <ColorModeButton></ColorModeButton>
+                <color-mode-button></color-mode-button>
             </template>
             <u-navigation-menu :items="navItems"></u-navigation-menu>
             <template #body>
@@ -14,7 +14,7 @@
         </u-header>
         <u-main>
             <u-container>
-                <NuxtPage></NuxtPage>
+                <nuxt-page></nuxt-page>
             </u-container>
         </u-main>
         <u-footer class="border-t border-t-default">
@@ -26,7 +26,7 @@
             <template #left>
                 <div class="flex flex-col items-stretch gap-4">
                     <u-user name="Created by Matteo Beltrame" :avatar="{ src: 'https://tratteo.it/favicon.svg' }"></u-user>
-                    <CopyableText class="h-8 text-nowrap" :content="appMeta.author.email"></CopyableText>
+                    <copyable-text class="h-8 text-nowrap" :content="appMeta.author.email"></copyable-text>
                 </div>
             </template>
         </u-footer>

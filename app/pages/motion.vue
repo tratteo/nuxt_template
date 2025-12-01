@@ -13,11 +13,11 @@
             <u-button label="Check out the video" icon="logos:youtube-icon" color="neutral" to="https://youtu.be/CIemLLeImjE" target="_blank"></u-button>
         </div>
         <u-separator></u-separator>
-        <AsyncButton :promise="task">Expand container</AsyncButton>
-        <AnimatedHeight class="w-full bg-muted max-w-2xl border border-default rounded-lg">
-            <div class="w-full" :class="{ 'h-[20rem]': activated, 'h-[4rem]': !activated }"></div>
-        </AnimatedHeight>
-        <AnimateEnter v-for="i in 10" class="max-w-2xl">
+        <async-button :promise="task">Expand container</async-button>
+        <animated-height class="w-full bg-muted max-w-2xl border border-default rounded-lg">
+            <div class="w-full" :class="{ 'h-80': activated, 'h-16': !activated }"></div>
+        </animated-height>
+        <animate-enter v-for="i in 10" class="max-w-2xl">
             <u-card class="" variant="subtle">
                 <template #header>
                     <motion.p :variants="item">Card {{ i }}</motion.p>
@@ -27,11 +27,11 @@
                         <motion.p :variants="item"
                             >Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
                         </motion.p>
-                        <motion.div :variants="item" class="bg-muted h-[10rem] w-full rounded-md"></motion.div>
+                        <motion.div :variants="item" class="bg-muted h-40 w-full rounded-md"></motion.div>
                     </div>
                 </template>
             </u-card>
-        </AnimateEnter>
+        </animate-enter>
     </div>
 </template>
 

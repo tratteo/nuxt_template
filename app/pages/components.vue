@@ -9,7 +9,7 @@
             <template #header>
                 <u-form-field label="Reordable elements" description="Move the elements dragging them from the handle and check how the underlying list updates"></u-form-field>
             </template>
-            <AnimatedHeight>
+            <animated-height>
                 <div class="flex flex-col gap-4 w-full">
                     <Reordable :items="items" class="">
                         <template #item="{ item, index }">
@@ -27,7 +27,7 @@
                         </template>
                     </Reordable>
                 </div>
-            </AnimatedHeight>
+            </animated-height>
             <u-button label="Add" icon="material-symbols:add-rounded" variant="soft" class="w-fit ml-auto" @click="addItem"></u-button>
             <pre><code class="text-sm">{{ items }}</code></pre>
         </u-card>
@@ -36,9 +36,9 @@
                 <u-form-field label="Sticky element" description="Hover any of the following elements and they will stick to your mouse, very cool microinteraction"></u-form-field>
             </template>
             <div class="flex w-full justify-center">
-                <StickyElement v-if="mounted">
+                <sticky-element v-if="mounted">
                     <div class="bg-primary rounded-full aspect-square p-4 flex items-center justify-center text-inverted font-semibold">Hover me!</div>
-                </StickyElement>
+                </sticky-element>
             </div>
         </u-card>
         <u-card variant="subtle" class="w-full">
@@ -52,7 +52,7 @@
                 </div>
                 <div class="flex w-full justify-center">
                     <u-button class="group" :variant="cast<ButtonProps['variant']>(animatedArrowProps.variant)" :size="cast<ButtonProps['size']>(animatedArrowProps.size)">
-                        <AnimatedArrow :size="cast<ButtonProps['size']>(animatedArrowProps.size)"> Click me</AnimatedArrow>
+                        <animated-arrow :size="cast<ButtonProps['size']>(animatedArrowProps.size)"> Click me</animated-arrow>
                     </u-button>
                 </div>
             </div>
@@ -62,14 +62,14 @@
                 <u-form-field label="Copyable text menu" description="A text field that can be copied and has the possibility to add different actions"></u-form-field>
             </template>
             <div class="flex flex-col items-center gap-2">
-                <CopyableText
+                <copyable-text
                     content="Copy me!"
                     class="w-fit"
                     :items="[
                         { label: 'Check repository', icon: 'mdi:github' },
                         { label: 'Go on YouTube', icon: 'mdi:youtube' },
                     ]"
-                ></CopyableText>
+                ></copyable-text>
             </div>
         </u-card>
         <u-card variant="subtle" class="w-full">
@@ -80,7 +80,7 @@
                 ></u-form-field>
             </template>
             <div class="flex flex-col gap-2">
-                <MorphingGradient class="opacity-100"></MorphingGradient>
+                <morphing-gradient class="opacity-100"></morphing-gradient>
             </div>
         </u-card>
     </div>

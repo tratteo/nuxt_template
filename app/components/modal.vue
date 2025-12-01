@@ -1,17 +1,23 @@
 <template>
-    <u-drawer v-if="isMobile" v-bind="metaVariants" v-model:open="isOpen" :ui="{ body: 'w-full', footer: 'items-end', ...uiSheetVariants }">
+    <u-drawer v-if="isMobile" v-bind="{ ...metaVariants, $attrs }" v-model:open="isOpen" :ui="{ body: 'w-full', footer: 'items-end', ...uiSheetVariants }">
         <template #title v-if="$slots.title"> <slot name="title" :arg="currentArg"></slot></template>
+        <template #description v-if="$slots.description"> <slot name="description" :arg="currentArg"></slot></template>
         <template #body v-if="$slots.body">
-            <slot name="body" :arg="currentArg"></slot>
+            <animated-height>
+                <slot name="body" :arg="currentArg"></slot>
+            </animated-height>
         </template>
         <template #footer v-if="$slots.footer">
             <slot name="footer" :arg="currentArg"></slot>
         </template>
     </u-drawer>
-    <u-modal v-else v-bind="metaVariants" v-model:open="isOpen" :ui="{ footer: 'justify-end', ...uiBoxVariants }">
+    <u-modal v-else v-bind="{ ...metaVariants, $attrs }" v-model:open="isOpen" :ui="{ footer: 'justify-end', ...uiBoxVariants }">
         <template #title v-if="$slots.title"><slot name="title" :arg="currentArg"></slot></template>
+        <template #description v-if="$slots.description"> <slot name="description" :arg="currentArg"></slot></template>
         <template #body v-if="$slots.body">
-            <slot name="body" :arg="currentArg"></slot>
+            <animated-height>
+                <slot name="body" :arg="currentArg"></slot>
+            </animated-height>
         </template>
         <template #footer v-if="$slots.footer">
             <div class="flex justify-end w-full gap-2">

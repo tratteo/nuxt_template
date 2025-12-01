@@ -13,7 +13,7 @@ export default defineAppConfig({
         },
         toaster: {
             slots: {
-                viewport: "z-[10001]",
+                viewport: "z-10001",
             },
         },
     },

@@ -1,15 +1,7 @@
 <template>
-    <LayoutGroup>
+    <layout-group>
         <motion.div layout :transition="layoutTransition">
-            <u-button
-                @click="onClick"
-                :disabled="isAwaiting || props.disabled"
-                :icon="isAwaiting ? 'svg-spinners:180-ring-with-bg' : leadingIcon"
-                :type="type"
-                :variant="variant"
-                :color="color"
-                class="flex items-center"
-            >
+            <u-button @click="onClick" v-bind="mergedAttrs" class="flex items-center">
                 <template #default>
                     <motion.div v-if="$slots.default" key="content" layout :transition="layoutTransition">
                         <slot></slot>
@@ -17,32 +9,27 @@
                 </template>
             </u-button>
         </motion.div>
-    </LayoutGroup>
+    </layout-group>
 </template>
 
 <script lang="ts" setup>
-import { LayoutGroup, motion, type $Transition, type VariantType } from "motion-v";
+import type { ButtonProps } from "@nuxt/ui";
+import { LayoutGroup, motion, type $Transition } from "motion-v";
 
-const iconVariants: { [k: string]: VariantType } = {
-    hidden: { opacity: 0, scale: 0.5 },
-    show: { opacity: 1, scale: 1 },
-};
 const layoutTransition: $Transition = { type: "spring", bounce: 0.25, duration: 0.4 };
-const iconTransition: $Transition = { type: "spring", bounce: 0.4, duration: 0.3, opacity: { delay: 0 } };
-
+const attrs = useAttrs();
 const awaitingPromise = ref(false);
 const isAwaiting = computed(() => props.awaiting || awaitingPromise.value);
 
-const props = defineProps<{
-    leadingIcon?: string;
-    awaiting?: boolean;
-    type?: "submit" | "reset" | "button";
-    color?: "neutral" | "primary" | "error" | "success" | "warning" | "info";
-    variant?: "solid" | "outline" | "soft" | "subtle" | "ghost" | "link";
-    disabled?: boolean;
-
-    promise?: () => Promise<void | any>;
-}>();
+const props = defineProps<
+    {
+        awaiting?: boolean;
+        promise?: () => Promise<void | any>;
+    } & ButtonProps
+>();
+const mergedAttrs = computed(() => {
+    return { ...props, disabled: isAwaiting.value || props.disabled, icon: isAwaiting.value ? "svg-spinners:180-ring-with-bg" : props.leadingIcon, ...attrs };
+});
 const emits = defineEmits<{ (e: "click", ev: MouseEvent): void }>();
 
 function onClick(ev: MouseEvent) {
