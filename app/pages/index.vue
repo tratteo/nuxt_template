@@ -31,6 +31,8 @@
     </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const mounted = useMounted();
+</script>
 
 <style></style>

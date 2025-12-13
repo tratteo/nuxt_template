@@ -43,7 +43,7 @@
 
         <u-content-toc v-if="data" :links="data.body.toc?.links" highlight class="lg:hidden"> </u-content-toc>
         <u-page-body>
-            <ContentRenderer v-if="data" id="content" :value="data" class="markdown-content flex-1" />
+            <content-renderer v-if="data" id="content" :value="data" class="markdown-content flex-1" />
             <u-separator></u-separator>
             <p class="font-semibold">Related articles</p>
             <u-blog-posts id="related-articles">

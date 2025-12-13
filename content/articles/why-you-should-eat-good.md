@@ -9,6 +9,7 @@ author_description: "Coding guy"
 thumbnail: /assets/articles/why-you-should-eat-good.jpeg
 ---
 
+
 Alright, beautiful humans, let's have a heart-to-heart about the fuel you're putting in your magnificent meat suit. If your body were a luxury car, would you fill it with premium gasoline or would you dump a mixture of Red Bull and regret into the tank? Because right now, many of us are treating our bodies like they're indestructible garbage disposals with legs.
 
 ::warning{}

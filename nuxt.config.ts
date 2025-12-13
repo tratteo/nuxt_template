@@ -19,6 +19,18 @@ export default defineNuxtConfig({
     schemaOrg: {
         identity: definePerson(appMeta.author),
     },
+    image: {
+        providers: {
+            shields: {
+                name: "shields",
+                provider: "~/providers/shields.ts",
+            },
+            favicon: {
+                name: "favicon",
+                provider: "~/providers/favicon.ts",
+            },
+        },
+    },
     content: {
         build: {
             markdown: {
@@ -32,5 +44,5 @@ export default defineNuxtConfig({
             },
         },
     },
-    modules: ["@nuxt/ui", "motion-v/nuxt", "@nuxt/content", "@nuxtjs/seo", "@vueuse/nuxt"],
+    modules: ["@nuxt/ui", "@nuxt/image", "@nuxtjs/mdc", "motion-v/nuxt", "@nuxt/content", "@nuxtjs/seo", "@vueuse/nuxt"],
 });

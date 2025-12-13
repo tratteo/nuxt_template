@@ -7,6 +7,7 @@ export function tryParseInt(s: string | undefined | null): number | undefined {
         return undefined;
     }
 }
+
 export function tryParse(s: string | undefined | null): number | undefined {
     if (isNullOrEmpty(s)) return undefined;
     try {
