@@ -10,6 +10,9 @@
         <client-only>
             <map-view map-id="default-id" :height="'50svh'" width="100%" :markers="markers"></map-view>
         </client-only>
+
+        <u-avatar provider="favicon" src="firebase.com" />
+        <nuxt-img provider="shields" src="youtube/channel/views" />
     </div>
 </template>
 

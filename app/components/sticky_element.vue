@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { frame, motion, type SpringOptions, useMotionValue, useSpring } from "motion-v";
+import { frame, motion, type SpringOptions, useSpring } from "motion-v";
 
 const props = withDefaults(defineProps<{ amplitude?: number; spring?: SpringOptions }>(), {
     amplitude: 10,
