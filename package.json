@@ -24,7 +24,7 @@
     "leaflet": "^1.9.4",
     "leaflet.markercluster": "^1.5.3",
     "lodash": "^4.17.21",
-    "motion-v": "^1.7.4",
+    "motion-v": "^1.7.6",
     "nuxt": "^4.2.2",
     "remark-reading-time": "^2.0.2",
     "sortablejs": "^1.15.6",
